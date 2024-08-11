@@ -1,0 +1,207 @@
+{
+  "scriptPath": "indexer.ts",
+  "numBatches": 1,
+  "streamOptions": {
+    "streamUrl": "https://mainnet.starknet.a5a.ch"
+  },
+  "streamConfigurationOptions": {
+    "network": "starknet",
+    "filter": {
+      "header": {
+        "weak": true
+      },
+      "events": [
+        {
+          "keys": [
+            "0x010c19bef19acd19b2c9f4caa40fd47c9fbe1d9f91324d44dcd36be2dae96784"
+          ],
+          "includeReceipt": false
+        }
+      ]
+    },
+    "finality": "DATA_STATUS_ACCEPTED",
+    "startingBlock": 10000
+  },
+  "testOptions": {},
+  "stream": [
+    {
+      "cursor": {
+        "orderKey": 9999,
+        "uniqueKey": "0x07897fdc7fcd2196b88c8e81e26fa569bed856e30640de9e63b5b585b7c50c7a"
+      },
+      "end_cursor": {
+        "orderKey": 10000,
+        "uniqueKey": "0x04a3b447d12cb22166e083dd6563ef24c12fcdfe80496a3fc74242eb1fa9a7fc"
+      },
+      "finality": "DATA_STATUS_FINALIZED",
+      "input": [
+        {
+          "status": "BLOCK_STATUS_ACCEPTED_ON_L1",
+          "header": {
+            "blockHash": "0x04a3b447d12cb22166e083dd6563ef24c12fcdfe80496a3fc74242eb1fa9a7fc",
+            "parentBlockHash": "0x07897fdc7fcd2196b88c8e81e26fa569bed856e30640de9e63b5b585b7c50c7a",
+            "blockNumber": "10000",
+            "sequencerAddress": "0x05dcd266a80b8a5f29f04d779c6b166b80150c24f2180a75e82427242dab20a9",
+            "newRoot": "0x0201a8c833dcc043c6f5d46ea40cc8ab4186d818bf898bc661e6621fc6515200",
+            "timestamp": "2022-11-19T17:45:07+00:00",
+            "starknetVersion": "0.10.1",
+            "l1GasPrice": {
+              "priceInFri": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "priceInWei": "0x0000000000000000000000000000000000000000000000000000000303c6fe21"
+            },
+            "l1DataGasPrice": {
+              "priceInFri": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "priceInWei": "0x0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            "l1DataAvailabilityMode": "L1_DATA_AVAILABILITY_MODE_CALLDATA"
+          },
+          "events": [
+            {
+              "transaction": {
+                "meta": {
+                  "hash": "0x04ed239310e3db9d71c54ba831d351d06843413a3e04ed9f12eb098b54550ae8",
+                  "maxFee": "0x000000000000000000000000000000000000000000000000000077729982bbe0",
+                  "signature": [
+                    "0x0594fcf62643e440233b9ad939398d2ed87f9ed6f28b2d2420780f37dce550c6",
+                    "0x02cd330c47c40dd5c0ceea7586794962b3a405b32352b46912fdd20a5288a824"
+                  ],
+                  "nonce": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                  "transactionIndex": "59"
+                },
+                "deployAccount": {
+                  "constructorCalldata": [
+                    "0x033434ad846cdd5f23eb73ff09fe6fddd568284a0fb7d1be20ee482f044dabe2",
+                    "0x0079dc0da7c54b95f10aa182ad0a46400db63156920adb65eca2654c0945a463",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002",
+                    "0x079a180f4133b10fac1f0370d94e02c9305e3a3b4805ea89cd7bb9e98cd216de",
+                    "0x0000000000000000000000000000000000000000000000000000000000000000"
+                  ],
+                  "contractAddressSalt": "0x079a180f4133b10fac1f0370d94e02c9305e3a3b4805ea89cd7bb9e98cd216de",
+                  "classHash": "0x025ec026985a3bf9d0cc1fe17326b245dfdc3ff89b8fde106542a3ea56c5a918"
+                }
+              },
+              "event": {
+                "fromAddress": "0x04addae73d33ae78ec4a903bbb87ca52e04697ffe42b87cbfa3336d374565c70",
+                "keys": [
+                  "0x010c19bef19acd19b2c9f4caa40fd47c9fbe1d9f91324d44dcd36be2dae96784"
+                ],
+                "data": [
+                  "0x04addae73d33ae78ec4a903bbb87ca52e04697ffe42b87cbfa3336d374565c70",
+                  "0x079a180f4133b10fac1f0370d94e02c9305e3a3b4805ea89cd7bb9e98cd216de",
+                  "0x0000000000000000000000000000000000000000000000000000000000000000"
+                ]
+              }
+            },
+            {
+              "transaction": {
+                "meta": {
+                  "hash": "0x0226ce1f283f94ad1529650f5a0533caef9ed2b037b2f42479cc5925dc39893c",
+                  "maxFee": "0x000000000000000000000000000000000000000000000000000077729982bbe0",
+                  "signature": [
+                    "0x03647cdd85a027dd49c0c79ec0f956e500ad55e97d9beef339084dd7fad20993",
+                    "0x03bd2d2e54826134071f2e7304e72de2c4c7fb61277a955109133931d7791883"
+                  ],
+                  "nonce": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                  "transactionIndex": "66"
+                },
+                "deployAccount": {
+                  "constructorCalldata": [
+                    "0x033434ad846cdd5f23eb73ff09fe6fddd568284a0fb7d1be20ee482f044dabe2",
+                    "0x0079dc0da7c54b95f10aa182ad0a46400db63156920adb65eca2654c0945a463",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002",
+                    "0x0139719de6cb2ed760ed4d1a96aade30c69339c8ac786677b8ce6130cccfc47c",
+                    "0x0000000000000000000000000000000000000000000000000000000000000000"
+                  ],
+                  "contractAddressSalt": "0x0139719de6cb2ed760ed4d1a96aade30c69339c8ac786677b8ce6130cccfc47c",
+                  "classHash": "0x025ec026985a3bf9d0cc1fe17326b245dfdc3ff89b8fde106542a3ea56c5a918"
+                }
+              },
+              "event": {
+                "fromAddress": "0x01ce272633cd9db57641a0e0cb730ee8b9732060c510ca8219e47bbbf98f500c",
+                "keys": [
+                  "0x010c19bef19acd19b2c9f4caa40fd47c9fbe1d9f91324d44dcd36be2dae96784"
+                ],
+                "data": [
+                  "0x01ce272633cd9db57641a0e0cb730ee8b9732060c510ca8219e47bbbf98f500c",
+                  "0x0139719de6cb2ed760ed4d1a96aade30c69339c8ac786677b8ce6130cccfc47c",
+                  "0x0000000000000000000000000000000000000000000000000000000000000000"
+                ]
+              }
+            },
+            {
+              "transaction": {
+                "meta": {
+                  "hash": "0x07ad09bf0e94907358dce1e8eb7d56ccfdfde6f29d822164bf81aea8cd7ddd79",
+                  "maxFee": "0x000000000000000000000000000000000000000000000000000077729982bbe0",
+                  "signature": [
+                    "0x059f8fbc3716fb719b0d05bc252450b40165d79755ffb50ea12ee0f5627e4140",
+                    "0x0463a535d112ce758a45b4516198c4783991415ede7f9f3eb1f0b5918536b39f"
+                  ],
+                  "nonce": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                  "transactionIndex": "68"
+                },
+                "deployAccount": {
+                  "constructorCalldata": [
+                    "0x033434ad846cdd5f23eb73ff09fe6fddd568284a0fb7d1be20ee482f044dabe2",
+                    "0x0079dc0da7c54b95f10aa182ad0a46400db63156920adb65eca2654c0945a463",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002",
+                    "0x00c6540fbb105ebf97086869c885cd9e4cf4299c395d99f319121c82776f495d",
+                    "0x0000000000000000000000000000000000000000000000000000000000000000"
+                  ],
+                  "contractAddressSalt": "0x00c6540fbb105ebf97086869c885cd9e4cf4299c395d99f319121c82776f495d",
+                  "classHash": "0x025ec026985a3bf9d0cc1fe17326b245dfdc3ff89b8fde106542a3ea56c5a918"
+                }
+              },
+              "event": {
+                "fromAddress": "0x01a55a7ee3154e6cf6b28b39534c38d2d7143e18f820eef754dd549ece9d6438",
+                "keys": [
+                  "0x010c19bef19acd19b2c9f4caa40fd47c9fbe1d9f91324d44dcd36be2dae96784"
+                ],
+                "data": [
+                  "0x01a55a7ee3154e6cf6b28b39534c38d2d7143e18f820eef754dd549ece9d6438",
+                  "0x00c6540fbb105ebf97086869c885cd9e4cf4299c395d99f319121c82776f495d",
+                  "0x0000000000000000000000000000000000000000000000000000000000000000"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "output": [
+        {
+          "network": "starknet-mainnet",
+          "block_hash": "0x04a3b447d12cb22166e083dd6563ef24c12fcdfe80496a3fc74242eb1fa9a7fc",
+          "block_number": 10000,
+          "block_timestamp": "2022-11-19T17:45:07+00:00",
+          "transaction_hash": "0x04ed239310e3db9d71c54ba831d351d06843413a3e04ed9f12eb098b54550ae8",
+          "transaction_index": "59",
+          "account": "0x04addae73d33ae78ec4a903bbb87ca52e04697ffe42b87cbfa3336d374565c70",
+          "key": "0x079a180f4133b10fac1f0370d94e02c9305e3a3b4805ea89cd7bb9e98cd216de",
+          "guardian": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "network": "starknet-mainnet",
+          "block_hash": "0x04a3b447d12cb22166e083dd6563ef24c12fcdfe80496a3fc74242eb1fa9a7fc",
+          "block_number": 10000,
+          "block_timestamp": "2022-11-19T17:45:07+00:00",
+          "transaction_hash": "0x0226ce1f283f94ad1529650f5a0533caef9ed2b037b2f42479cc5925dc39893c",
+          "transaction_index": "66",
+          "account": "0x01ce272633cd9db57641a0e0cb730ee8b9732060c510ca8219e47bbbf98f500c",
+          "key": "0x0139719de6cb2ed760ed4d1a96aade30c69339c8ac786677b8ce6130cccfc47c",
+          "guardian": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "network": "starknet-mainnet",
+          "block_hash": "0x04a3b447d12cb22166e083dd6563ef24c12fcdfe80496a3fc74242eb1fa9a7fc",
+          "block_number": 10000,
+          "block_timestamp": "2022-11-19T17:45:07+00:00",
+          "transaction_hash": "0x07ad09bf0e94907358dce1e8eb7d56ccfdfde6f29d822164bf81aea8cd7ddd79",
+          "transaction_index": "68",
+          "account": "0x01a55a7ee3154e6cf6b28b39534c38d2d7143e18f820eef754dd549ece9d6438",
+          "key": "0x00c6540fbb105ebf97086869c885cd9e4cf4299c395d99f319121c82776f495d",
+          "guardian": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    }
+  ]
+}
