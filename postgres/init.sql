@@ -1,4 +1,5 @@
 CREATE TABLE accounts_created (
+    id VARCHAR(70) PRIMARY KEY,
     _cursor bigint,
     network VARCHAR(50),
     block_hash VARCHAR(66),

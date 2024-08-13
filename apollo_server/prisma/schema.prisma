@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model accounts_created {
+  id                String    @id @db.VarChar(70)
+  cursor            BigInt?   @map("_cursor")
+  network           String?   @db.VarChar(50)
+  block_hash        String?   @db.VarChar(66)
+  block_number      Int?
+  block_timestamp   DateTime? @db.Timestamp(6)
+  transaction_hash  String?   @db.VarChar(66)
+  transaction_index Int?
+  account           String?   @db.VarChar(66)
+  key               String?   @db.VarChar(66)
+  guardian          String?   @db.VarChar(66)
+}

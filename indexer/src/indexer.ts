@@ -2,7 +2,7 @@ import type { Block } from "https://esm.sh/@apibara/indexer@0.3.1/starknet";
 
 export const config = {
   streamUrl: Deno.env.get("APIBARA_STREAM_URL"),
-  startingBlock: 0,
+  startingBlock: 650000,
   network: "starknet",
   finality: "DATA_STATUS_ACCEPTED",
   filter: {
@@ -34,8 +34,12 @@ export default function transform({ header, events }: Block) {
     const { hash, transactionIndex } = transaction.meta;
 
     const [account, key, guardian] = event.data;
+    console.log(event.data);
+
+    const id = `${hash}_${event.index ?? 0}`;
 
     return {
+      id: id,
       network: "starknet-mainnet",
       block_hash: blockHash,
       block_number: +(blockNumber ?? 0),

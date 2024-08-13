@@ -14,5 +14,18 @@ services:
       - postgres:/var/lib/postgresql/data
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
 
+  apollo-server:
+    build:
+      dockerfile: apollo_server/Dockerfile
+      context: .
+    restart: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      postgres:
+        condition: service_started
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/indexer
+
 volumes:
   postgres:
