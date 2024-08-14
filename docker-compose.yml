@@ -14,6 +14,20 @@ services:
       - postgres:/var/lib/postgresql/data
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
 
+  indexer:
+    build:
+      dockerfile: indexer/Dockerfile
+      context: .
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_started
+    environment:
+      APIBARA_STREAM_URL: https://mainnet.starknet.a5a.ch
+      DATABASE_CONN_STRING: postgres://postgres:postgres@postgres:5432/indexer
+    volumes:
+      - indexer:/data
+
   apollo-server:
     build:
       dockerfile: apollo_server/Dockerfile
@@ -29,3 +43,4 @@ services:
 
 volumes:
   postgres:
+  indexer:

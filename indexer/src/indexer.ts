@@ -34,7 +34,6 @@ export default function transform({ header, events }: Block) {
     const { hash, transactionIndex } = transaction.meta;
 
     const [account, key, guardian] = event.data;
-    console.log(event.data);
 
     const id = `${hash}_${event.index ?? 0}`;
 
