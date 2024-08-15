@@ -57,8 +57,8 @@ docker-compose up --build
 3. Open `localhost:4000` and run some queries
 
 ```Graphql
-query ExampleQuery($limit: Int) {
-  getAccounts(limit: $limit) {
+query ExampleQuery($page: Int, $pageSize: Int) {
+  getAccounts(page: $page, pageSize: $pageSize) {
     account
     guardian
   }
@@ -66,6 +66,7 @@ query ExampleQuery($limit: Int) {
 
 # Variables
 {
-  "limit": 5
+  "page": 1,
+  "pageSize": 5
 }
 ```

@@ -1,13 +1,15 @@
 import { PrismaClient } from "@prisma/client";
-import { paginateResults } from "./utils.js";
 
 export const prisma = new PrismaClient();
 export const resolvers = {
   Query: {
-    getAccounts: async (_, { limit }) => {
+    getAccounts: async (_, { page, pageSize }) => {
       try {
-        const result = await prisma.accounts_created.findMany();
-        return paginateResults({ pageSize: limit, result: result });
+        const result = await prisma.accounts_created.findMany({
+          skip: (page - 1) * pageSize,
+          take: pageSize
+        });
+        return result;
       } catch (error) {
         console.error("Error fetching accounts:", error);
         throw new Error("Failed to fetch accounts");

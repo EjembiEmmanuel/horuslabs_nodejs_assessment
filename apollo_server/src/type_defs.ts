@@ -14,7 +14,7 @@ export const typeDefs = `#graphql
   }
 
   type Query {
-    getAccounts(limit: Int, offset: Int): [AccountCreated]
+    getAccounts(page: Int, pageSize: Int): [AccountCreated]
     getAccountByGuardian(guardianAddress: String!): AccountCreated
     getAccountByAddress(ownerAddress: String!): AccountCreated
   }
